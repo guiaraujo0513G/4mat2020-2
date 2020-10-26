@@ -6,11 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainToolbarComponent } from './ui/main-toolbar/main-toolbar.component';
+import { MainMenuComponent } from './ui/main-menu/main-menu.component';
+import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainToolbarComponent
+    MainToolbarComponent,
+    MainMenuComponent,
+    MainFooterComponent
   ],
   imports: [
     BrowserModule,
