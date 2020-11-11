@@ -7,10 +7,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CursoService {
 
-  private server = environment.apiServer 
+  private server = environment.apiServer
+  private apiUrl = this.server + 'curso'
+
   constructor(private http : HttpClient) { }
 
   listar() {
-      return this.http.get(this.server + 'curso').toPromise()
+      return this.http.get(this.apiUrl).toPromise()
+  }
+
+  excluir(id : string) {
+      return this.http.request('DELETE', this.apiUrl, {body: {id: id}}).toPromise()
   }
 }
