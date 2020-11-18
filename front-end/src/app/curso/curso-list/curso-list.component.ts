@@ -38,11 +38,11 @@ export class CursoListComponent implements OnInit {
           }
           catch(erro){
             // 4) Dar um feedback de erro para o usuário
+            console.log(erro)
             this.snackBar.open('ERRO: não foi possível excluir este item.', 'Que pena!', {
                 duration: 5000 // 5 segundos
             })
           }
         }
     }
-
 }
